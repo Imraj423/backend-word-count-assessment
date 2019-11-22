@@ -32,8 +32,6 @@ Optional: define a helper function to avoid code duplication inside
 print_words() and print_top().
 """
 import sys
-import re
-import string
 
 def word_count_dict(filename):
   word_count = {}  
@@ -77,7 +75,7 @@ def main():
         sys.exit(1)
 
     option = sys.argv[1]
-    filename = sys.argv[2]
+    filename = sys.argv[1]
     if option == '--count':
         print_words(filename)
     elif option == '--topcount':

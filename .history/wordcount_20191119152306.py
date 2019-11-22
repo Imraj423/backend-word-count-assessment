@@ -32,8 +32,6 @@ Optional: define a helper function to avoid code duplication inside
 print_words() and print_top().
 """
 import sys
-import re
-import string
 
 def word_count_dict(filename):
   word_count = {}  
@@ -72,20 +70,20 @@ def print_top(filename):
 
 
 def main():
-    if len(sys.argv) != 3:
-        print 'usage: python wordcount.py {--count | --topcount} file'
+  if len(sys.argv) != 3:
+        print('usage: ./wordcount.py {--count | --topcount} file')
         sys.exit(1)
 
-    option = sys.argv[1]
-    filename = sys.argv[2]
-    if option == '--count':
-        print_words(filename)
-    elif option == '--topcount':
-        print_top(filename)
-    else:
-        print 'unknown option: ' + option
-        sys.exit(1)
+  option = sys.argv[1]
+  filename = sys.argv[2]
+  if option == '--count':
+    print_words(filename)
+  elif option == '--topcount':
+    print_top(filename)
+  else:
+    print 'unknown option: ' + option
+    sys.exit(1)
 
 
 if __name__ == '__main__':
-    main()
+  main()
