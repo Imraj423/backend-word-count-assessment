@@ -32,8 +32,6 @@ Optional: define a helper function to avoid code duplication inside
 print_words() and print_top().
 """
 import sys
-import re
-import string
 
 def word_count_dict(filename):
   word_count = {}  

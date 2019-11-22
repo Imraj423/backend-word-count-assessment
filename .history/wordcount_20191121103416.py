@@ -77,7 +77,7 @@ def main():
         sys.exit(1)
 
     option = sys.argv[1]
-    filename = sys.argv[2]
+    filename = sys.argv[1]
     if option == '--count':
         print_words(filename)
     elif option == '--topcount':
